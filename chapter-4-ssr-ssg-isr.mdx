@@ -37,7 +37,7 @@ To convert SSR page to ISR or SSG page we need to use the **generateStaticParams
 The **generateStaticParams **function is a custom function meaning we don't **import **it and then call it, but rather create a function that is called **generateStaticParams**.
    
 To use the function we need to **export **the function and the returned value of the function should be an array with objects, and each object should have a property which has the exact same name as the dynamic route, and the value of that property should be the possible route path name.   
-```
+```js
 export async function generateStaticParams() {
   const usersData: Promise<User[]> = getAllUsers()
   const users = await usersData;
